@@ -1,0 +1,38 @@
+
+@media (min-width:576px){
+    .modal-dialog{
+        max-width: 940px;
+    }
+}
+.heading_modal{
+    color:#0D2664;
+    font-size: 2rem;
+    font-weight: 350;
+}
+.input_height{
+    padding: 1.375rem .75rem;
+}
+
+.modal_borders{
+    border-bottom: none;
+    border-top:none;
+}
+
+.close_button{
+    color:#F05913;
+    font-weight: 300;
+    font-size: 3rem;
+    padding: 0 1.75rem 0 0 !important;
+}
+
+.submit_button{
+    background-color: #F05913;
+    border-radius: 2rem;
+    color:#FFF;
+    padding: .1rem .75rem;
+}
+
+.submit_button{ 
+    border:none;
+
+}
