@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {switchMap} from 'rxjs/operators';
-import {timer} from 'rxjs';
+import { switchMap } from 'rxjs/operators';
+import { timer } from 'rxjs';
 import { AiService } from '../ai.service';
 @Component({
   selector: 'app-table',
@@ -12,20 +12,20 @@ export class TableComponent implements OnInit {
   details: any;
   rawdata: any;
 
-  constructor( private tabledata:AiService ) { }
+  constructor(private tabledata: AiService) { }
 
   ngOnInit() {
 
-    this.datatimer=timer(0,10000).pipe(switchMap(()=>this.tabledata.getMethod())
-    ).subscribe((res:any)=>{
+    this.datatimer = timer(0, 10000).pipe(switchMap(() => this.tabledata.getMethod())
+    ).subscribe((res: any) => {
       console.log(res);
-      this.details= res.hits;
+      this.details = res.hits;
     }
     );
   }
 
-  modaldata(id){
-    this.rawdata=id;
+  modaldata(id) {
+    this.rawdata = id;
   }
 
 }

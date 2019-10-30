@@ -6,9 +6,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AiService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  getMethod(){
+  getMethod() {
     return this.http.get("https://hn.algolia.com/api/v1/search_by_date?tags=story");
   }
 }
